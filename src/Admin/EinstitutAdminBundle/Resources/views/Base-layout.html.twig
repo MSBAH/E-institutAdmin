@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{{ asset('bundles/EinstitutAdmin/favicon.ico') }}">
+    <title>
+    {% block title %}
+         E-institut Administartion 
+    {% endblock %}
+    </title>
+    <!--Core CSS -->
+    <link href="{{ asset('bundles/EinstitutAdmin/bs3/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/EinstitutAdmin/css/bootstrap-reset.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/EinstitutAdmin/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{ asset('bundles/EinstitutAdmin/css/bootstrap-switch.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/bootstrap-fileupload/bootstrap-fileupload.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/bootstrap-wysihtml5/bootstrap-wysihtml5.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/bootstrap-datepicker/css/datepicker.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/bootstrap-timepicker/compiled/timepicker.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/bootstrap-colorpicker/css/colorpicker.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/bootstrap-datetimepicker/css/datetimepicker.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/jquery-multi-select/css/multi-select.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/jquery-tags-input/jquery.tagsinput.css') }}" />
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/EinstitutAdmin/js/select2/select2.css') }}" />
+
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('bundles/EinstitutAdmin/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/EinstitutAdmin/css/style-responsive.css') }}" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+    {% block stylesheets %}
+
+    {% endblock %}
+</head>
+
+<body>
+
+<section id="container" >
+<!--header start-->
+{% include 'EinstitutAdminBundle::includes/Header.html.twig' %}
+<!--header end-->
+{% include 'EinstitutAdminBundle::includes/left-sidebar.html.twig' %}
+<!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+        <!-- page start-->
+        {% block content %}
+
+	{% endblock %}
+        <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+                
+                </section>
+
+              
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+            
+               
+                </section>
+                <section class="panel">
+                    <header class="panel-heading">
+                        Réservation de Matériel informatique
+                              <span class="tools pull-right">
+                            <a class="fa fa-chevron-down" href="javascript:;"></a>
+                            <a class="fa fa-cog" href="javascript:;"></a>
+                            <a class="fa fa-times" href="javascript:;"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-horizontal  " action="#">
+                         
+
+                    
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Date debut :</label>
+                                <div class="col-md-4">
+                                    <div data-date="2012-12-21T15:25:00Z" class="input-group date form_datetime-adv">
+                                        <input type="text" class="form-control" readonly size="16">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-primary date-reset"><i class="fa fa-times"></i></button>
+                                            <button type="button" class="btn btn-warning date-set"><i class="fa fa-calendar"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Date fin :</label>
+                                <div class="col-md-4">
+                                    <div data-date="2012-12-21T15:25:00Z" class="input-group date form_datetime-adv">
+                                        <input type="text" class="form-control" readonly size="16">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-primary date-reset"><i class="fa fa-times"></i></button>
+                                            <button type="button" class="btn btn-warning date-set"><i class="fa fa-calendar"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+
+                      
+                            
+                            
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Matériel informatique :</label>
+                                <div class="col-md-4">
+                                   
+                                      <select class="form-control input-lg m-bot15" >
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                                </div>
+                              
+                            </div>
+
+                        </form>
+                    </div>
+                </section>
+       
+             
+
+         
+            </div>
+        </div>
+
+
+
+
+
+       
+
+        <!-- page end-->
+        </section>
+    </section>
+    <!--main content end-->
+<!--right sidebar start-->
+{% include 'EinstitutAdminBundle::includes/right-sidebar.html.twig' %}
+<!--right sidebar end-->
+
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!--Core js-->
+<script src="{{ asset('bundles/EinstitutAdmin/js/jquery.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/jquery-1.8.3.min.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/bs3/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/jquery-ui-1.9.2.custom.min.js') }}"></script>
+<script class="include" type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/jquery.dcjqaccordion.2.7.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/jquery.scrollTo.min.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/easypiechart/jquery.easypiechart.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/jquery.nicescroll.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/jquery.nicescroll.js') }}"></script>
+
+<script src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-switch.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/fuelux/js/spinner.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-fileupload/bootstrap-fileupload.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-wysihtml5/wysihtml5-0.3.0.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-wysihtml5/bootstrap-wysihtml5.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-daterangepicker/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-timepicker/js/bootstrap-timepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/jquery-multi-select/js/jquery.multi-select.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/jquery-multi-select/js/jquery.quicksearch.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('bundles/EinstitutAdmin/js/bootstrap-inputmask/bootstrap-inputmask.min.js') }}"></script>
+
+<script src="{{ asset('bundles/EinstitutAdmin/js/jquery-tags-input/jquery.tagsinput.js') }}"></script>
+
+<script src="{{ asset('bundles/EinstitutAdmin/js/select2/select2.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/select-init.js') }}"></script>
+
+
+<!--common script init for all pages-->
+<script src="{{ asset('bundles/EinstitutAdmin/js/scripts.js') }}"></script>
+
+<script src="{{ asset('bundles/EinstitutAdmin/js/toggle-init.js') }}"></script>
+
+<script src="{{ asset('bundles/EinstitutAdmin/js/advanced-form.js') }}"></script>
+<!--Easy Pie Chart-->
+<script src="{{ asset('bundles/EinstitutAdmin/js/easypiechart/jquery.easypiechart.js') }}"></script>
+<!--Sparkline Chart-->
+<script src="{{ asset('bundles/EinstitutAdmin/js/sparkline/jquery.sparkline.js') }}"></script>
+<!--jQuery Flot Chart-->
+<script src="{{ asset('bundles/EinstitutAdmin/js/flot-chart/jquery.flot.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/flot-chart/jquery.flot.tooltip.min.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/flot-chart/jquery.flot.resize.js') }}"></script>
+<script src="{{ asset('bundles/EinstitutAdmin/js/flot-chart/jquery.flot.pie.resize.js') }}"></script>
+
+{% block javascripts %}
+
+{% endblock %}
+</body>
+</html>
+
+

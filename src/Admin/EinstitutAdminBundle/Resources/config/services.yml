@@ -1,0 +1,4 @@
+services:
+#    einstitut_admin.example:
+#        class: Admin\EinstitutAdminBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
