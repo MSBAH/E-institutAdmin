@@ -4,8 +4,8 @@ imports:
     - { resource: services.yml }
 
 framework:
-    #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator: ~
+    
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -25,6 +25,12 @@ framework:
     fragments:       ~
     http_method_override: true
 
+# FOS_user configuration
+fos_user:
+    db_driver: orm 
+    firewall_name: main
+    user_class: Admin\EinstitutAdminBundle\Entity\User
+    
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
