@@ -1,0 +1,78 @@
+{% extends "EinstitutAdminBundle::Base-layout.html.twig" %}
+
+{% block title %}
+    Bienvenue ! | {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+ <div class="row">
+                        <div class="col-md-12">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    Réservation de Salle
+                                    <span class="tools pull-right">
+                                        <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                        <a class="fa fa-cog" href="javascript:;"></a>
+                                        <a class="fa fa-times" href="javascript:;"></a>
+                                    </span>
+                                </header>
+                                <div class="panel-body">
+                                    <div class="position-center">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label for="numsalle">Numero de salle</label>
+                                                <input type="text" class="form-control" id="numsalle" placeholder="Numero de salle">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nomens">Nom Enseignant</label>
+                                                <input type="text" class="form-control" id="nomens" placeholder="Nom Enseignant">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Email">Module</label>
+                                                <input type="text" class="form-control" id="exampleInputemail" placeholder="Module">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-5">Date debut :</label>
+                                                <div class="col-md-6">
+                                                    <div data-date="2012-12-21T15:25:00Z" class="input-group date form_datetime-adv">
+                                                        <input type="text" class="form-control" readonly="" size="16">
+                                                        <div class="input-group-btn">
+                                                            <button type="button" class="btn btn-primary date-reset"><i class="fa fa-times"></i></button>
+                                                            <button type="button" class="btn btn-warning date-set"><i class="fa fa-calendar"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                
+                                            <div class="form-group">
+                                                <label class="control-label col-md-5">Date debut :</label>
+                                                <div class="col-md-6">
+                                                    <div data-date="2012-12-21T15:25:00Z" class="input-group date form_datetime-adv">
+                                                        <input type="text" class="form-control" readonly="" size="16">
+                                                        <div class="input-group-btn">
+                                                            <button type="button" class="btn btn-primary date-reset"><i class="fa fa-times"></i></button>
+                                                            <button type="button" class="btn btn-warning date-set"><i class="fa fa-calendar"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

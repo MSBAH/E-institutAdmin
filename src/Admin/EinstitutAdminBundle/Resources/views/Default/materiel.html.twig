@@ -1,0 +1,158 @@
+{% extends "EinstitutAdminBundle::Base-layout.html.twig" %}
+
+{% block title %}
+    Bienvenue ! | {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+ <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Matériels
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-cog"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <div class="adv-table editable-table ">
+                            <div class="clearfix">
+                                <div class="btn-group">
+                                    <button id="editable-sample_new" class="btn btn-primary">
+                                        Add New <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group pull-right">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#">Print</a></li>
+                                        <li><a href="#">Save as PDF</a></li>
+                                        <li><a href="#">Export to Excel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="space15"></div>
+                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Date de début</th>
+								    <th>Date de fin</th>
+                                    <th>Enseignant</th>
+                                    <th>Etat</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="">
+                                    <td>projecteur</td>
+                                    <td>07 January 2015 - 08:00</td>
+									<td>07 January 2015 - 12:00</td>
+                                    <td>Mamadou traore</td>
+                                    <td class="center">Réservé</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>mac</td>
+                                    <td>12 Janvier 2015 - 14:00</td>
+									<td>12 Janvier 2015 - 18:00</td>
+                                    <td>Enseignant 2</td>
+                                    <td class="center">Réservé</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+            
+               
+                </section>
+                <section class="panel">
+                    <header class="panel-heading">
+                        Réservation de Matériel informatique
+                              <span class="tools pull-right">
+                            <a class="fa fa-chevron-down" href="javascript:;"></a>
+                            <a class="fa fa-cog" href="javascript:;"></a>
+                            <a class="fa fa-times" href="javascript:;"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-horizontal  " action="#">
+                         
+
+                    
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Date debut :</label>
+                                <div class="col-md-4">
+                                    <div data-date="2012-12-21T15:25:00Z" class="input-group date form_datetime-adv">
+                                        <input type="text" class="form-control" readonly="" size="16">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-primary date-reset"><i class="fa fa-times"></i></button>
+                                            <button type="button" class="btn btn-warning date-set"><i class="fa fa-calendar"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Date fin :</label>
+                                <div class="col-md-4">
+                                    <div data-date="2012-12-21T15:25:00Z" class="input-group date form_datetime-adv">
+                                        <input type="text" class="form-control" readonly="" size="16">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-primary date-reset"><i class="fa fa-times"></i></button>
+                                            <button type="button" class="btn btn-warning date-set"><i class="fa fa-calendar"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+
+                      
+                            
+                            
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Matériel informatique :</label>
+                                <div class="col-md-4">
+                                   
+                                      <select class="form-control input-lg m-bot15" >
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                                </div>
+                              
+                            </div>
+
+                        </form>
+                    </div>
+                </section>
+       
+             
+
+         
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

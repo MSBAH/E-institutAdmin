@@ -1,0 +1,96 @@
+{% extends "EinstitutAdminBundle::Base-layout.html.twig" %}
+
+{% block title %}
+    Bienvenue ! | {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+ <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+            
+               
+                </section>
+                <section class="panel">
+                    <header class="panel-heading">
+                        Inscription Etudiant
+                              <span class="tools pull-right">
+                            <a class="fa fa-chevron-down" href="javascript:;"></a>
+                            <a class="fa fa-cog" href="javascript:;"></a>
+                            <a class="fa fa-times" href="javascript:;"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-horizontal  " action="#">
+                         
+
+                    
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Nom :</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Nom" autofocus>
+                                </div>
+                            </div>
+                            
+
+                           <div class="form-group">
+                                <label class="control-label col-md-3">Prénom :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Prenom" autofocus>
+                                </div>
+                            </div>
+                      
+                             <div class="form-group">
+                                <label class="control-label col-md-3">E-Mail :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="E-mail" autofocus>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="control-label col-md-3">Numéro Etudiant :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Numéro Etudiant" autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Intitulé Diplome :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Intitulé Diplome" autofocus>
+                                </div>
+                            </div>
+							 <div class="form-group">
+                                <label class="control-label col-md-3">Type Diplome :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Type Diplome" autofocus>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="control-label col-md-3">Année D'étude :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Année D'étude" autofocus>
+                                </div>
+                            </div>
+							
+							<button type="submit" class="btn btn-info ">Soumettre</button> 
+                            
+                         
+                        </form>
+                    </div>
+                </section>
+       
+             
+
+         
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

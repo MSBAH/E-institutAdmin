@@ -1,0 +1,87 @@
+{% extends "EinstitutAdminBundle::Base-layout.html.twig" %}
+
+{% block title %}
+    Bienvenue ! | {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="row">
+            <div class="col-sm-3">
+                <section class="panel">
+                     <div class="panel-body">
+                        <a href="mail_compose.html"  class="btn btn-compose">
+                            Composer Mail
+                        </a>
+                        <ul class="nav nav-pills nav-stacked mail-nav">
+                            <li class="active"><a href="mail.html"> <i class="fa fa-inbox"></i> Boite de réception  <span class="label label-danger pull-right inbox-notification">9</span></a></li>
+                            <li><a href="#"> <i class="fa fa-envelope-o"></i> Messages envoyés</a></li>
+                            <li><a href="#"> <i class="fa fa-trash-o"></i> Corbeille </a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+            <div class="col-sm-9">
+                <section class="panel">
+                    <header class="panel-heading wht-bg">
+                       <h4 class="gen-case"> Composer Mail
+                           <form action="#" class="pull-right mail-src-position">
+                            <div class="input-append">
+                                <input type="text" class="form-control " placeholder="Rechercher mail">
+                            </div>
+                        </form>
+                       </h4>
+                    </header>
+                    <div class="panel-body">
+                        <div class="compose-mail">
+                            <form role="form-horizontal" method="post">
+                                <div class="form-group">
+                                    <label for="to" class="">A:</label>
+                                    <input type="text" tabindex="1" id="to" class="form-control">
+
+                                    <div class="compose-options">
+                                        <a onclick="$(this).hide(); $('#cc').parent().removeClass('hidden'); $('#cc').focus();" href="javascript:;">Cc</a>
+                                        <a onclick="$(this).hide(); $('#bcc').parent().removeClass('hidden'); $('#bcc').focus();" href="javascript:;">Bcc</a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group hidden">
+                                    <label for="cc" class="">Cc:</label>
+                                    <input type="text" tabindex="2" id="cc" class="form-control">
+                                </div>
+
+                                <div class="form-group hidden">
+                                    <label for="bcc" class="">Bcc:</label>
+                                    <input type="text" tabindex="2" id="bcc" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject" class="">Sujet:</label>
+                                    <input type="text" tabindex="1" id="subject" class="form-control">
+                                </div>
+
+                                <div class="compose-editor">
+                                    <textarea class="wysihtml5 form-control" rows="9"></textarea>
+                                    <input type="file" class="default">
+                                </div>
+                                <div class="compose-btn">
+                                    <button class="btn btn-primary btn-sm"><i class="fa fa-check"></i> Envoyer</button>
+                                    <button class="btn btn-sm"><i class="fa fa-times"></i> Annuler</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

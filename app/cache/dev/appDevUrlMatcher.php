@@ -127,17 +127,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/a')) {
+        if (0 === strpos($pathinfo, '/admin')) {
             // einstitut_admin_homepage
             if ($pathinfo === '/admin') {
                 return array (  '_controller' => 'Admin\\EinstitutAdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'einstitut_admin_homepage',);
             }
 
-            // homepage
-            if ($pathinfo === '/app/example') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            // einstitut_admin_salle_voir
+            if ($pathinfo === '/admin') {
+                return array (  '_controller' => 'Admin\\EinstitutAdminBundle\\Controller\\DefaultController::SalleAction',  '_route' => 'einstitut_admin_salle_voir',);
             }
 
+        }
+
+        // einstitut_admin_salle_ajouter
+        if ($pathinfo === '/salle_ajouter') {
+            return array (  '_controller' => 'Admin\\EinstitutAdminBundle\\Controller\\DefaultController::ajouterSalleAction',  '_route' => 'einstitut_admin_salle_ajouter',);
+        }
+
+        // homepage
+        if ($pathinfo === '/app/example') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
         if (0 === strpos($pathinfo, '/log')) {

@@ -1,3 +1,11 @@
 einstitut_admin_homepage:
     path:     /admin
     defaults: { _controller: EinstitutAdminBundle:Default:index }
+    
+einstitut_admin_salle_voir:
+    path:     /admin
+    defaults: { _controller: EinstitutAdminBundle:Default:Salle }
+    
+einstitut_admin_salle_ajouter:
+    path:     /salle_ajouter
+    defaults: { _controller: EinstitutAdminBundle:Default:ajouterSalle }
