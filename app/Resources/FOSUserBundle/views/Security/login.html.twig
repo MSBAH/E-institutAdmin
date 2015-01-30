@@ -1,0 +1,30 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    merci
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+<form class="form-signin" action="{{ path("fos_user_security_check") }}" method="post">
+    <div class="login-header"><img src="{{ asset('bundles/EinstitutAdmin/images/logo/logo_s2.png') }}" ></div>
+    <div class="login-wrap">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+        <div class="user-login-info">
+            <input type="text" class="form-control" placeholder="Identifiant" autofocus id="username" name="_username" value="{{ last_username }}" required="required" />
+            <input type="password" class="form-control" placeholder="Mot de passe" id="password" name="_password" required="required" />
+            
+        </div>
+        
+      
+        <label class="checkbox">
+            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+            {{ 'security.login.remember_me'|trans }}
+        </label>
+
+        <input class="btn btn-lg btn-login btn-block" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+    </div>
+</form>
+{% endblock fos_user_content %}
