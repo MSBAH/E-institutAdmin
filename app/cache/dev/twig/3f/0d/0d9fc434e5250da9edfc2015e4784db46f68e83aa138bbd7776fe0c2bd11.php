@@ -146,88 +146,7 @@ class __TwigTemplate_3f0d0d9fc434e5250da9edfc2015e4784db46f68e83aa138bbd7776fe0c
         // line 64
         $this->displayBlock('content', $context, $blocks);
         // line 67
-        echo "        <div class=\"row\">
-            <div class=\"col-md-12\">
-                <section class=\"panel\">
-                
-                </section>
-
-              
-
-            </div>
-        </div>
-        <div class=\"row\">
-            <div class=\"col-md-12\">
-                <section class=\"panel\">
-            
-               
-                </section>
-                <section class=\"panel\">
-                    <header class=\"panel-heading\">
-                        Réservation de Matériel informatique
-                              <span class=\"tools pull-right\">
-                            <a class=\"fa fa-chevron-down\" href=\"javascript:;\"></a>
-                            <a class=\"fa fa-cog\" href=\"javascript:;\"></a>
-                            <a class=\"fa fa-times\" href=\"javascript:;\"></a>
-                         </span>
-                    </header>
-                    <div class=\"panel-body\">
-                        <form class=\"form-horizontal  \" action=\"#\">
-                         
-
-                    
-                            <div class=\"form-group\">
-                                <label class=\"control-label col-md-3\">Date debut :</label>
-                                <div class=\"col-md-4\">
-                                    <div data-date=\"2012-12-21T15:25:00Z\" class=\"input-group date form_datetime-adv\">
-                                        <input type=\"text\" class=\"form-control\" readonly size=\"16\">
-                                        <div class=\"input-group-btn\">
-                                            <button type=\"button\" class=\"btn btn-primary date-reset\"><i class=\"fa fa-times\"></i></button>
-                                            <button type=\"button\" class=\"btn btn-warning date-set\"><i class=\"fa fa-calendar\"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class=\"form-group\">
-                                <label class=\"control-label col-md-3\">Date fin :</label>
-                                <div class=\"col-md-4\">
-                                    <div data-date=\"2012-12-21T15:25:00Z\" class=\"input-group date form_datetime-adv\">
-                                        <input type=\"text\" class=\"form-control\" readonly size=\"16\">
-                                        <div class=\"input-group-btn\">
-                                            <button type=\"button\" class=\"btn btn-primary date-reset\"><i class=\"fa fa-times\"></i></button>
-                                            <button type=\"button\" class=\"btn btn-warning date-set\"><i class=\"fa fa-calendar\"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                              
-                            </div>
-
-                      
-                            
-                            
-                            <div class=\"form-group\">
-                                <label class=\"control-label col-md-3\">Matériel informatique :</label>
-                                <div class=\"col-md-4\">
-                                   
-                                      <select class=\"form-control input-lg m-bot15\" >
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
-                            </select>
-                                </div>
-                              
-                            </div>
-
-                        </form>
-                    </div>
-                </section>
-       
-             
-
-         
-            </div>
-        </div>
+        echo "        
 
 
 
@@ -241,9 +160,9 @@ class __TwigTemplate_3f0d0d9fc434e5250da9edfc2015e4784db46f68e83aa138bbd7776fe0c
     <!--main content end-->
 <!--right sidebar start-->
 ";
-        // line 161
+        // line 80
         $this->env->loadTemplate("EinstitutAdminBundle::includes/right-sidebar.html.twig")->display($context);
-        // line 162
+        // line 81
         echo "<!--right sidebar end-->
 
 </section>
@@ -252,167 +171,167 @@ class __TwigTemplate_3f0d0d9fc434e5250da9edfc2015e4784db46f68e83aa138bbd7776fe0c
 
 <!--Core js-->
 <script src=\"";
-        // line 169
+        // line 88
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 170
+        // line 89
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery-1.8.3.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 171
+        // line 90
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/bs3/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 172
+        // line 91
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery-ui-1.9.2.custom.min.js"), "html", null, true);
         echo "\"></script>
 <script class=\"include\" type=\"text/javascript\" src=\"";
-        // line 173
+        // line 92
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery.dcjqaccordion.2.7.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 174
+        // line 93
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery.scrollTo.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 175
+        // line 94
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/easypiechart/jquery.easypiechart.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 176
+        // line 95
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 177
+        // line 96
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery.nicescroll.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 178
+        // line 97
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery.nicescroll.js"), "html", null, true);
         echo "\"></script>
 
 <script src=\"";
-        // line 180
+        // line 99
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-switch.js"), "html", null, true);
         echo "\"></script>
 
 <script type=\"text/javascript\" src=\"";
-        // line 182
+        // line 101
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/fuelux/js/spinner.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 183
+        // line 102
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-fileupload/bootstrap-fileupload.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 184
+        // line 103
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-wysihtml5/wysihtml5-0.3.0.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 185
+        // line 104
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-wysihtml5/bootstrap-wysihtml5.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 186
+        // line 105
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-datepicker/js/bootstrap-datepicker.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 187
+        // line 106
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 188
+        // line 107
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-daterangepicker/moment.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 189
+        // line 108
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 190
+        // line 109
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-colorpicker/js/bootstrap-colorpicker.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 191
+        // line 110
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-timepicker/js/bootstrap-timepicker.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 192
+        // line 111
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery-multi-select/js/jquery.multi-select.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 193
+        // line 112
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery-multi-select/js/jquery.quicksearch.js"), "html", null, true);
         echo "\"></script>
 
 <script type=\"text/javascript\" src=\"";
-        // line 195
+        // line 114
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/bootstrap-inputmask/bootstrap-inputmask.min.js"), "html", null, true);
         echo "\"></script>
 
 <script src=\"";
-        // line 197
+        // line 116
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/jquery-tags-input/jquery.tagsinput.js"), "html", null, true);
         echo "\"></script>
 
 <script src=\"";
-        // line 199
+        // line 118
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/select2/select2.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 200
+        // line 119
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/select-init.js"), "html", null, true);
         echo "\"></script>
 
 
 <!--common script init for all pages-->
 <script src=\"";
-        // line 204
+        // line 123
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/scripts.js"), "html", null, true);
         echo "\"></script>
 
 <script src=\"";
-        // line 206
+        // line 125
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/toggle-init.js"), "html", null, true);
         echo "\"></script>
 
 <script src=\"";
-        // line 208
+        // line 127
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/advanced-form.js"), "html", null, true);
         echo "\"></script>
 <!--Easy Pie Chart-->
 <script src=\"";
-        // line 210
+        // line 129
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/easypiechart/jquery.easypiechart.js"), "html", null, true);
         echo "\"></script>
 <!--Sparkline Chart-->
 <script src=\"";
-        // line 212
+        // line 131
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/sparkline/jquery.sparkline.js"), "html", null, true);
         echo "\"></script>
 <!--jQuery Flot Chart-->
 <script src=\"";
-        // line 214
+        // line 133
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/flot-chart/jquery.flot.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 215
+        // line 134
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/flot-chart/jquery.flot.tooltip.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 216
+        // line 135
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/flot-chart/jquery.flot.resize.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 217
+        // line 136
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/EinstitutAdmin/js/flot-chart/jquery.flot.pie.resize.js"), "html", null, true);
         echo "\"></script>
 
 ";
-        // line 219
+        // line 138
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 222
+        // line 141
         echo "</body>
 </html>
 
@@ -444,10 +363,10 @@ class __TwigTemplate_3f0d0d9fc434e5250da9edfc2015e4784db46f68e83aa138bbd7776fe0c
 \t";
     }
 
-    // line 219
+    // line 138
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 220
+        // line 139
         echo "
 ";
     }
@@ -464,6 +383,6 @@ class __TwigTemplate_3f0d0d9fc434e5250da9edfc2015e4784db46f68e83aa138bbd7776fe0c
 
     public function getDebugInfo()
     {
-        return array (  451 => 220,  448 => 219,  443 => 65,  440 => 64,  435 => 48,  432 => 47,  427 => 12,  424 => 11,  416 => 222,  414 => 219,  409 => 217,  405 => 216,  401 => 215,  397 => 214,  392 => 212,  387 => 210,  382 => 208,  377 => 206,  372 => 204,  365 => 200,  361 => 199,  356 => 197,  351 => 195,  346 => 193,  342 => 192,  338 => 191,  334 => 190,  330 => 189,  326 => 188,  322 => 187,  318 => 186,  314 => 185,  310 => 184,  306 => 183,  302 => 182,  297 => 180,  292 => 178,  288 => 177,  284 => 176,  280 => 175,  276 => 174,  272 => 173,  268 => 172,  264 => 171,  260 => 170,  256 => 169,  247 => 162,  245 => 161,  149 => 67,  147 => 64,  140 => 59,  138 => 58,  135 => 57,  133 => 56,  125 => 50,  123 => 47,  108 => 35,  104 => 34,  98 => 31,  93 => 29,  89 => 28,  85 => 27,  81 => 26,  77 => 25,  73 => 24,  69 => 23,  65 => 22,  61 => 21,  57 => 20,  52 => 18,  48 => 17,  44 => 16,  40 => 14,  38 => 11,  33 => 9,  23 => 1,);
+        return array (  370 => 139,  367 => 138,  362 => 65,  359 => 64,  354 => 48,  351 => 47,  346 => 12,  343 => 11,  335 => 141,  333 => 138,  328 => 136,  324 => 135,  320 => 134,  316 => 133,  311 => 131,  306 => 129,  301 => 127,  296 => 125,  291 => 123,  284 => 119,  280 => 118,  275 => 116,  270 => 114,  265 => 112,  261 => 111,  257 => 110,  253 => 109,  249 => 108,  245 => 107,  241 => 106,  237 => 105,  233 => 104,  229 => 103,  225 => 102,  221 => 101,  216 => 99,  211 => 97,  207 => 96,  203 => 95,  199 => 94,  195 => 93,  191 => 92,  187 => 91,  183 => 90,  179 => 89,  175 => 88,  166 => 81,  164 => 80,  149 => 67,  147 => 64,  140 => 59,  138 => 58,  135 => 57,  133 => 56,  125 => 50,  123 => 47,  108 => 35,  104 => 34,  98 => 31,  93 => 29,  89 => 28,  85 => 27,  81 => 26,  77 => 25,  73 => 24,  69 => 23,  65 => 22,  61 => 21,  57 => 20,  52 => 18,  48 => 17,  44 => 16,  40 => 14,  38 => 11,  33 => 9,  23 => 1,);
     }
 }

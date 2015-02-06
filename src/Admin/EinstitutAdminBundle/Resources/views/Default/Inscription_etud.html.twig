@@ -12,6 +12,43 @@
             
                
                 </section>
+                
+                
+                
+               {% set User = '' %}
+               {% set Nom = '' %}
+                {% set Prenom = '' %}
+                {% set Email = '' %}
+                {% set Numetud = '' %}
+                {% set Intitule = '' %}
+                {% set Type = '' %}
+                {% set Date = '' %}
+                 
+                    
+                    {% if inscr is not null %}
+                    
+                        {% set User = inscr.etudiant.utilisateur.username %}
+                        {% set Nom = inscr.etudiant.utilisateur.nom %}
+			{% set Prenom = inscr.etudiant.utilisateur.prenom %}
+                       
+                        {% set Email = inscr.etudiant.utilisateur.email %}
+                        {% set Numetud = inscr.etudiant.numetudiant %}
+                        {% set Intitule = inscr.diplome.intituleDiplome %}
+                        {% set Type = inscr.diplome.typeDiplome %}
+                        {% set Date = inscr.dateInscription %}
+			
+                         
+                    {% endif %} 
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 <section class="panel">
                     <header class="panel-heading">
                         Inscription Etudiant
@@ -22,14 +59,19 @@
                          </span>
                     </header>
                     <div class="panel-body">
-                        <form class="form-horizontal  " action="#">
+                        <form class="form-horizontal  " method="POST" action='{{ path('einstitut_ajouter_etud') }}' >
                          
+          
 
+                     
+                            
+                            
+         
                     
                             <div class="form-group">
                                 <label class="control-label col-md-3">Nom :</label>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="Nom" autofocus>
+                                    <input type="text" class="form-control" placeholder="Nom" name="nom" value="{{ Nom }}" autofocus >
                                 </div>
                             </div>
                             
@@ -37,45 +79,48 @@
                            <div class="form-group">
                                 <label class="control-label col-md-3">Prénom :</label>
                                 <div class="col-md-4">
-                                   <input type="text" class="form-control" placeholder="Prenom" autofocus>
+                                   <input type="text" class="form-control" placeholder="Prenom" name="prenom" value="{{ Prenom }}" autofocus>
                                 </div>
                             </div>
                       
                              <div class="form-group">
                                 <label class="control-label col-md-3">E-Mail :</label>
                                 <div class="col-md-4">
-                                   <input type="text" class="form-control" placeholder="E-mail" autofocus>
+                                   <input type="text" class="form-control" placeholder="E-mail"name="email" value="{{ Email }}" autofocus>
                                 </div>
-                            </div>
+                            </div> 
 							<div class="form-group">
                                 <label class="control-label col-md-3">Numéro Etudiant :</label>
                                 <div class="col-md-4">
-                                   <input type="text" class="form-control" placeholder="Numéro Etudiant" autofocus>
+                                   <input type="text" class="form-control" placeholder="Numéro Etudiant" name="numEtudiant" value="{{ Numetud }}" autofocus>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-3">Intitulé Diplome :</label>
                                 <div class="col-md-4">
-                                   <input type="text" class="form-control" placeholder="Intitulé Diplome" autofocus>
+                                   <input type="text" class="form-control" placeholder="Intitulé Diplome" name="intituleDiplome" value="{{ Intitule }}"  autofocus>
                                 </div>
                             </div>
 							 <div class="form-group">
                                 <label class="control-label col-md-3">Type Diplome :</label>
                                 <div class="col-md-4">
-                                   <input type="text" class="form-control" placeholder="Type Diplome" autofocus>
+                                   <input type="text" class="form-control" placeholder="Type Diplome" name="typeDiplome" value="{{ Type }}"  autofocus>
                                 </div>
                             </div>
 							<div class="form-group">
                                 <label class="control-label col-md-3">Année D'étude :</label>
                                 <div class="col-md-4">
-                                   <input type="text" class="form-control" placeholder="Année D'étude" autofocus>
+                                   <input type="text" class="form-control" placeholder="Année D'étude" name="dateInscription" value="{{ Date }}"  autofocus>
                                 </div>
                             </div>
 							
-							<button type="submit" class="btn btn-info ">Soumettre</button> 
+                            <input type="submit" name="btn_soumettre" class="btn btn-info" value="Valider"/>
                             
                          
                         </form>
+                        <center><span style="color:greenyellow">{% for message in app.session.flashbag.get('info') %}
+        {{ message }}
+      {% endfor %}</span></center>
                     </div>
                 </section>
        

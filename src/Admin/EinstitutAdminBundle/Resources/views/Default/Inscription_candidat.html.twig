@@ -1,0 +1,239 @@
+{% extends "EinstitutAdminBundle::Base-layout.html.twig" %}
+
+{% block title %}
+    Bienvenue ! | {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+ <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+            
+               
+                </section>
+                
+                
+                
+               
+               {% set Nom = '' %}
+                {% set Prenom = '' %}
+                {% set Email = '' %}
+                {% set Tel = '' %}
+                {% set Adresse = '' %}
+                {% set Sexe = '' %}
+                {% set Ville = '' %}
+                {% set Pays = '' %}
+                {% set Formation = '' %}
+                {% set Fichier = '' %}
+                {% set Niveau = '' %}
+                
+                 
+                    
+                    {% if candidat is not null %}
+                
+                        {% set Nom = candidat.utilisateur.nom %}
+			{% set Prenom = candidat.utilisateur.prenom %}
+                        {% set Email = candidat.utilisateur.email %}
+                        {% set Tel = candidat.utilisateur.tel %}
+                        {% set Adresse = candidat.utilisateur.adresse %}
+                        {% set Sexe = Candidat.utilisateur.sexe %}
+                        {% set Ville = Candidat.utilisateur.ville %}
+                        {% set Pays = Candidat.utilisateur.pays %}
+                        {% set Niveau = Candidat.niveau %}
+                       
+                
+                    {% endif %} 
+                
+               {#   {% if  is not null %}#}
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <section class="panel">
+                    <header class="panel-heading">
+                        Inscription Candidat
+                              <span class="tools pull-right">
+                            <a class="fa fa-chevron-down" href="javascript:;"></a>
+                            <a class="fa fa-cog" href="javascript:;"></a>
+                            <a class="fa fa-times" href="javascript:;"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-horizontal  " method="POST" action='{{ path('einstitut_ajouter_candidat') }}' >
+                         
+
+                    
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Nom :</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Nom" name="nom" value="{{ Nom }}" autofocus >
+                                </div>
+                            </div>
+                            
+
+                           <div class="form-group">
+                                <label class="control-label col-md-3">Prénom :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Prenom" name="prenom" value="{{ Prenom }}" autofocus>
+                                </div>
+                            </div>
+                      
+                             <div class="form-group">
+                                <label class="control-label col-md-3">E-Mail :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="E-mail"name="email" value="{{ Email }}" autofocus>
+                                </div>
+                            </div> 
+							<div class="form-group">
+                                <label class="control-label col-md-3">Tel :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Tel" name="tel" value="{{ Tel }}" autofocus>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="control-label col-md-3">Adresse :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Adresse" name="adresse" value="{{ Adresse }}" autofocus>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="control-label col-md-3">Sexe :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Sexe" name="sexe" value="{{ Sexe }}" autofocus>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="control-label col-md-3">Ville :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Ville" name="ville" value="{{ Ville }}" autofocus>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="control-label col-md-3">Pays :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Pays" name="pays" value="{{ Pays }}" autofocus>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="control-label col-md-3">Niveau :</label>
+                                <div class="col-md-4">
+                                   <input type="text" class="form-control" placeholder="Niveau" name="niveau" value="{{ Niveau }}" autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Formations :</label>
+                                <div class="col-md-4">
+                                   <select name="formations" >
+                                         
+                                     {% for f in formations %}
+                                    <option value="{{ f.id }}">{{ f.intituleDiplome }}</option>
+                                       {% endfor %}
+                                     
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Etablissements :</label>
+                                <div class="col-md-4">
+                                   <select name="etablissement" >
+                                         
+                                     {% for e in etab %}
+                                    <option value="{{ e.nomEtabl}}">{{ e.nomEtabl }}</option>
+                                     {% endfor %}
+                                     
+                                  </select>
+                                </div>
+                            </div>
+				<div class="form-group">
+                                <label class="control-label col-md-3">Fichiers:</label>
+                                <div class="col-md-4">
+                                    <textarea name="nomfichier"></textarea>
+                                </div>
+                            </div>
+							
+                            <input type="submit" name="btn_soumettre" class="btn btn-info" value="Valider"/>
+                            
+                         
+                        </form>
+                        <center><span style="color:greenyellow">{% for message in app.session.flashbag.get('info') %}
+        {{ message }}
+      {% endfor %}</span></center>
+                    </div>
+                </section>
+       
+                
+                
+                
+            {# 
+                 <section class="panel">
+                    <header class="panel-heading">
+                        Inscription Etudiant
+                              <span class="tools pull-right">
+                            <a class="fa fa-chevron-down" href="javascript:;"></a>
+                            <a class="fa fa-cog" href="javascript:;"></a>
+                            <a class="fa fa-times" href="javascript:;"></a>
+                         </span>
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-horizontal  " method="POST" action='{{ path('einstitut_ajouter_etud') }}' >
+                         
+          
+
+                      <div class="form-group">
+                                <label class="control-label col-md-3">Candidat :</label>
+                                <div class="col-md-4">
+                                   <select name="formations" >
+                                         
+                                     {% for f in formations %}
+                                    <option value="{{ f.id }}">{{ f.intituleDiplome }}</option>
+                                       {% endfor %}
+                                     
+                                  </select>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                              <input type="submit" name="btn_soumettre" class="btn btn-info" value="Valider"/>
+               
+                
+                </form>
+                        <center><span style="color:greenyellow">{% for message in app.session.flashbag.get('info') %}
+        {{ message }}
+      {% endfor %}</span></center>
+                    </div>
+                </section>
+       
+                #}
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+         
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

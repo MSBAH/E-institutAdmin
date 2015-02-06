@@ -67,10 +67,18 @@ class __TwigTemplate_3412da92902ffd87d59270b232ff717eb72e76aef95cde66e7ebc03cbd8
                     <span>Gestion Etudiants</span>
                 </a>
                 <ul class=\"sub\">
-                    <li><a href=\"basic_table.html\">Basic Table</a></li>
-                    <li><a href=\"responsive_table.html\">Responsive Table</a></li>
-                    <li><a href=\"dynamic_table.html\">Dynamic Table</a></li>
-                    <li><a href=\"editable_table.html\">Editable Table</a></li>
+                    <li><a href=\"";
+        // line 52
+        echo $this->env->getExtension('routing')->getPath("einstitut_ajouter_candidat");
+        echo "\">Inscription Candidat</a></li>
+                    <li><a href=\"";
+        // line 53
+        echo $this->env->getExtension('routing')->getPath("einstitut_voir_etud");
+        echo "\">Etudiants</a></li>
+                    <li><a href=\"";
+        // line 54
+        echo $this->env->getExtension('routing')->getPath("einstitut_ajouter_etud");
+        echo "\">Inscription Etudiant</a></li>
                 </ul>
             </li>
             <li class=\"sub-menu\">
@@ -157,8 +165,13 @@ class __TwigTemplate_3412da92902ffd87d59270b232ff717eb72e76aef95cde66e7ebc03cbd8
         return "EinstitutAdminBundle::includes/left-sidebar.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  80 => 54,  76 => 53,  72 => 52,  19 => 1,);
     }
 }

@@ -145,6 +145,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Admin\\EinstitutAdminBundle\\Controller\\DefaultController::ajouterSalleAction',  '_route' => 'einstitut_admin_salle_ajouter',);
         }
 
+        if (0 === strpos($pathinfo, '/etudiant')) {
+            // einstitut_ajouter_etud
+            if ($pathinfo === '/etudiant/ajouter') {
+                return array (  '_controller' => 'Admin\\EinstitutAdminBundle\\Controller\\EtudiantController::ajouterAction',  '_route' => 'einstitut_ajouter_etud',);
+            }
+
+            // einstitut_voir_etud
+            if ($pathinfo === '/etudiant/voir') {
+                return array (  '_controller' => 'Admin\\EinstitutAdminBundle\\Controller\\EtudiantController::etudiantAction',  '_route' => 'einstitut_voir_etud',);
+            }
+
+            // einstitut_ajouter_candidat
+            if ($pathinfo === '/etudiant/Ajoutcandidat') {
+                return array (  '_controller' => 'Admin\\EinstitutAdminBundle\\Controller\\EtudiantController::AjouterCandidatAction',  '_route' => 'einstitut_ajouter_candidat',);
+            }
+
+        }
+
         // homepage
         if ($pathinfo === '/app/example') {
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);

@@ -9,3 +9,4 @@ einstitut_admin_salle_voir:
 einstitut_admin_salle_ajouter:
     path:     /salle_ajouter
     defaults: { _controller: EinstitutAdminBundle:Default:ajouterSalle }
+

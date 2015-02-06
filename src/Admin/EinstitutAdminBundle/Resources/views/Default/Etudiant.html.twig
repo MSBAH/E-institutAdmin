@@ -53,32 +53,22 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                {% for etud in etuds %}
                                                 <tr class="">
-                                                    <td>12</td>
-                                                    <td>SABIRI</td>
-                                                    <td>ISSAM</td>
-                                                    <td class="center">sabiriissam@gmail.com</td>
-                                                    <td class="center">Adresse1</td>
-                                                    <td class="center">+33619376873</td>
-                                                    <td class="center">VICHY</td>
-                                                    <td class="center">SIPPE</td>
-                                                    <td class="center">0</td>
+                                                    <td>{{etud.etudiant.numEtudiant}}</td>
+                                                    <td>{{etud.etudiant.utilisateur.nom}}</td>
+                                                    <td>{{etud.etudiant.utilisateur.prenom}}</td>
+                                                    <td>{{etud.etudiant.utilisateur.email}}</td>
+                                                    <td>{{etud.etudiant.utilisateur.adresse}}</td>
+                                                    <td>{{etud.etudiant.utilisateur.tel}}</td>
+                                                    <td>{{etud.etudiant.utilisateur.ville}}</td>
+                                                    <td>{{etud.diplome.intituleDiplome}}</td>
+                                                    <td>{{etud.etudiant.absences|length}}</td>
+                                                    
                                                     <td><a class="edit" href="javascript:;">Edit</a></td>
                                                     <td><a class="delete" href="javascript:;">Delete</a></td>
                                                 </tr>
-                                                <tr class="">
-                                                    <td>13</td>
-                                                    <td>Serrakh</td>
-                                                    <td>Hatim</td>
-                                                    <td class="center">htm.serrakh@gmail.com</td>
-                                                    <td class="center">Adresse2</td>
-                                                    <td class="center">+33745587962</td>
-                                                    <td class="center">Vichy</td>
-                                                    <td class="center">SIPPE</td>
-                                                    <td>0</td>
-                                                    <td><a class="edit" href="javascript:;">Edit</a></td>
-                                                    <td><a class="delete" href="javascript:;">Delete</a></td>
-                                                </tr>
+                                                {% endfor %}
                                             </tbody>
                                         </table>
                                     </div>

@@ -38,11 +38,13 @@ class Etudiant
      */
     private $absences;
     
-    /**
+   /**
     *@ORM\OneToOne(targetEntity="Admin\EinstitutAdminBundle\Entity\User")
     *@ORM\JoinColumn(nullable=false)
     */
-    private $id_utilisateur;
+     
+    private $utilisateur;
+     
 
 
     /**
@@ -150,27 +152,29 @@ class Etudiant
     {
         return $this->absences;
     }
+  
+
 
     /**
-     * Set id_utilisateur
+     * Set utilisateur
      *
-     * @param \Admin\EinstitutAdminBundle\Entity\User $idUtilisateur
+     * @param \Admin\EinstitutAdminBundle\Entity\User $utilisateur
      * @return Etudiant
      */
-    public function setIdUtilisateur(\Admin\EinstitutAdminBundle\Entity\User $idUtilisateur)
+    public function setUtilisateur(\Admin\EinstitutAdminBundle\Entity\User $utilisateur)
     {
-        $this->id_utilisateur = $idUtilisateur;
+        $this->utilisateur = $utilisateur;
 
         return $this;
     }
 
     /**
-     * Get id_utilisateur
+     * Get utilisateur
      *
      * @return \Admin\EinstitutAdminBundle\Entity\User 
      */
-    public function getIdUtilisateur()
+    public function getUtilisateur()
     {
-        return $this->id_utilisateur;
+        return $this->utilisateur;
     }
 }

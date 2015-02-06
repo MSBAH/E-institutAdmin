@@ -2,6 +2,10 @@ einstitut_admin:
     resource: "@EinstitutAdminBundle/Resources/config/routing.yml"
     prefix:   /
     
+einstitut_etudiant:
+    resource: "@EinstitutAdminBundle/Resources/config/etudiant_routing.yml"
+    prefix:   /etudiant
+    
 app:
     resource: @AppBundle/Controller/
     type:     annotation

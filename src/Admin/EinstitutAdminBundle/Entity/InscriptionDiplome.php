@@ -16,12 +16,12 @@ class InscriptionDiplome
     
      /**
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="Admin\EinstitutAdminBundle\Entity\Etudiant")
+     * @ORM\ManyToOne(targetEntity="Admin\EinstitutAdminBundle\Entity\Etudiant", cascade={"persist"})
      */
     private $etudiant;
     /**
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="Admin\EinstitutAdminBundle\Entity\Diplome")
+     * @ORM\ManyToOne(targetEntity="Admin\EinstitutAdminBundle\Entity\Diplome" ,cascade={"persist"})
      */
     private $diplome;
 

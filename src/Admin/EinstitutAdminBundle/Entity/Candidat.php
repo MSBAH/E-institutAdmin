@@ -30,7 +30,14 @@ class Candidat
     *@ORM\OneToOne(targetEntity="Admin\EinstitutAdminBundle\Entity\User")
     *@ORM\JoinColumn(nullable=false)
     */
-    private $id_utilisateur;
+    private $utilisateur;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="niveau", type="string", length=255)
+     */
+    private $niveau;
     
 
 
@@ -84,26 +91,50 @@ class Candidat
         return $this->dossiers;
     }
 
+
     /**
-     * Set id_utilisateur
+     * Set utilisateur
      *
-     * @param \Admin\EinstitutAdminBundle\Entity\User $idUtilisateur
+     * @param \Admin\EinstitutAdminBundle\Entity\User $utilisateur
      * @return Candidat
      */
-    public function setIdUtilisateur(\Admin\EinstitutAdminBundle\Entity\User $idUtilisateur)
+    public function setUtilisateur(\Admin\EinstitutAdminBundle\Entity\User $utilisateur)
     {
-        $this->id_utilisateur = $idUtilisateur;
+        $this->utilisateur = $utilisateur;
 
         return $this;
     }
 
     /**
-     * Get id_utilisateur
+     * Get utilisateur
      *
      * @return \Admin\EinstitutAdminBundle\Entity\User 
      */
-    public function getIdUtilisateur()
+    public function getUtilisateur()
     {
-        return $this->id_utilisateur;
+        return $this->utilisateur;
+    }
+
+    /**
+     * Set niveau
+     *
+     * @param string $niveau
+     * @return Candidat
+     */
+    public function setNiveau($niveau)
+    {
+        $this->niveau = $niveau;
+
+        return $this;
+    }
+
+    /**
+     * Get niveau
+     *
+     * @return string 
+     */
+    public function getNiveau()
+    {
+        return $this->niveau;
     }
 }

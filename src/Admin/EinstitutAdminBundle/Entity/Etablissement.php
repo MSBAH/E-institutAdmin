@@ -32,7 +32,8 @@ class Etablissement
     /**
      * @var string
      *
-     * @ORM\Column(name="adress_etabl", type="text")
+     * @ORM\Column(name="adress_etabl", type="text" )
+     * @ORM\JoinColumn(nullable=true)
      */
     private $adressEtabl;
 

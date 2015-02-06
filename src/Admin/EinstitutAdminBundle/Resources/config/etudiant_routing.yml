@@ -1,0 +1,12 @@
+einstitut_ajouter_etud:
+    path:     /ajouter
+    defaults: { _controller: EinstitutAdminBundle:Etudiant:ajouter }
+einstitut_voir_etud:
+    path:     /voir
+    defaults: { _controller: EinstitutAdminBundle:Etudiant:etudiant }
+einstitut_ajouter_candidat:
+    path:     /Ajoutcandidat
+    defaults: { _controller: EinstitutAdminBundle:Etudiant:AjouterCandidat }
+    
+
+
